@@ -37,9 +37,8 @@ function preparePage(){
     }
     else{
         document.querySelectorAll(`input[type="checkbox"]`).forEach((checkbox) => {checkbox.checked = true;})
-        console.log(document.querySelectorAll(`input[type="checkbox"]`))
+        editPage();
     }
-    console.log("done")
    /*
     if(brands){
         
