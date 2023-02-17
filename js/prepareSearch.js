@@ -39,6 +39,20 @@ async function preparePage(){
         document.querySelectorAll(`input[type="checkbox"]`).forEach((checkbox) => {checkbox.checked = true;})
         setTimeout(editPage, 500);
     }
+    if(ActuallParams.filter((param) => param.name.includes("est-vedette")).length != 0){
+        CarteVedette = ActuallParams.filter((param) => param.name.includes("est-vedette"));
+        var selectMenu = document.querySelector("select#est-vedette");
+        for(var i = 0; i < selectMenu.options.length; i++){
+            if(CarteVedette[0].value == selectMenu.item(i).value){
+                selectMenu.options.selectedIndex = i
+            }
+        } 
+    }
+    if(ActuallParams.filter((param) => param.name.includes("mot-cle")).length != 0){
+        MotCle = ActuallParams.filter((param) => param.name.includes("mot-cle"));
+        document.querySelector("#mot-cle").value = MotCle[0].value;
+    }
+    
    /*
     if(brands){
         

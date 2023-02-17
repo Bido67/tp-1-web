@@ -57,21 +57,50 @@
                 </div>
                 <div id="form-de-recherche" class="col-3">
                     <p>Le form des cartes</p>
-                    <form action="https://www.w3schools.com/action_page.php" method="POST"> 
-                        <p>Recherche par mot clé:</p>
-                        <input type="text" name="text" class="search" placeholder="Search here!">
-                        <br>
-                        <input type="checkbox" id="marqueNvidia" name="marque1" value="Nvidia">
-                        <label for="marqueNvidia">Nvidia</label>
-                        <br>
-                        <input type="checkbox" id="marqueAMD" name="marque2" value="AMD">
-                        <label for="marqueAMD">AMD</label>
-                        <br>
-                        <input type="checkbox" id="marqueIntel" name="marque3" value="Intel">
-                        <label for="marqueIntel">Intel</label>
-                        <br>
-                        <input type="submit" value="Submit">
-                        <br>
+                    <form id="searchForm" class="row" action="https://www.w3schools.com/action_page.php" method="POST">
+                        <div class="col-12">
+                            <div class="row">
+                                <label for="mot-cle">Recherche par mot-clé</label>
+                                <input id="mot-cle" type="text" name="mot-cle" class="search col-12" placeholder="Mot-clé..." fill-background rounded-corners rounded-corners-padding-small />
+                            </div>
+                            <div class="row justify-content-between">
+                                <label for="mot-cle">Recherche numérique</label>
+                                <input class="col-5" id="min" placeholder="Min" name="min" type="number" fill-background rounded-corners rounded-corners-padding-small />
+                                <input class="col-5" id="max" placeholder="Max" name="max" type="number" fill-background rounded-corners rounded-corners-padding-small />
+                            </div>
+                            <div class="row justify-content-between">
+                                <label for="est-vedette">Carte Vedette:</label>
+                                <select name="est-vedette" id="est-vedette" fill-background rounded-corners rounded-corners-padding-small>
+                                    <option value="any">Peut-importe</option>
+                                    <option value="yes">Oui</option>
+                                    <option value="no">Non</option>
+                                </select>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-12">
+                                    <label for="marqueNvidia">Marques de carte:</label>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-12">
+                                    <input type="checkbox" id="marqueNvidia" name="marque1" value="Nvidia" fill-background rounded-corners rounded-corners-padding-small />
+                                    <label for="marqueNvidia">Nvidia</label>
+                                </div>
+                                <div class="col-12">
+                                    <input type="checkbox" id="marqueAMD" name="marque2" value="AMD" fill-background rounded-corners rounded-corners-padding-small />
+                                    <label for="marqueAMD">AMD</label>
+                                </div>
+                                <div class="col-12">
+                                    <input type="checkbox" id="marqueIntel" name="marque3" value="Intel" fill-background rounded-corners rounded-corners-padding-small />
+                                    <label for="marqueIntel">Intel</label>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <button class="col-auto" type="button" title="ResetForm" onclick="resetForm();" fill-background rounded-corners rounded-corners-padding-small>Réinitialiser</button>
+                                <input class="col-auto" type="submit" value="Rechercher" fill-background rounded-corners rounded-corners-padding-small />
+                            </div>
+                            <br />
+                        </div>
                     </form>
                 </div>
             </div>
@@ -83,6 +112,26 @@
                 </div>
             </div>
         </footer>
+        <script type="text/javascript">
+            function resetForm() {
+                var form = document.querySelector("#searchForm");
+                form.querySelectorAll("input").forEach((inputField) => {
+                    if (inputField.type == "button" || inputField.type == "submit") {
+                        return;
+                    } else if (inputField.type == "checkbox") {
+                        inputField.checked = true;
+                    }  else if (inputField.type == "text") {
+                        inputField.value = "";
+                    } else if (inputField.type == "number") {
+                        inputField.value = "";
+                    }
+                });
+                form.querySelectorAll("select").forEach((inputField) => {
+                        inputField.options.selectedIndex = 0;
+                });
+                editPage();
+            }
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="./js/prepareSearch.js"></script>
     </body>
