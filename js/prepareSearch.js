@@ -1,4 +1,4 @@
-function preparePage(){
+async function preparePage(){
     /*for (const [key, value] of mySearchParams) {
 
     }*/
@@ -37,7 +37,7 @@ function preparePage(){
     }
     else{
         document.querySelectorAll(`input[type="checkbox"]`).forEach((checkbox) => {checkbox.checked = true;})
-        editPage();
+        setTimeout(editPage, 500);
     }
    /*
     if(brands){
