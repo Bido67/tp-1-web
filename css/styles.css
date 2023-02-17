@@ -205,6 +205,9 @@ div.carte::after{
     display: none;
     position: fixed;
 }
+*[rounded-corners-padding-small]{
+    padding: 7px 10px;
+}
 /*
 div[logo]{
     width: 75%;
