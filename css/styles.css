@@ -92,6 +92,7 @@ footer p {
     text-align: center;
 }
 header {
+    z-index: 1;
     position: fixed;
     top: 0px;
     height: var(--header-height);
@@ -143,6 +144,7 @@ a{
     min-height: 50%;
 }
 div.carte {
+    z-index: 0;
     margin: 10px;
     box-sizing: border-box;
 } 
@@ -220,11 +222,17 @@ ul.noMarker ::marker{
     .fuckBootstrap{
         width: 50%;
     }
+    header span {
+        display: none;
+    }
 }
 @media only screen and (min-width: 992px) {
     /*md and more*/
     .fuckBootstrap{
         width: 41%;
+    }
+    header span {
+        display: inline;
     }
 }
 

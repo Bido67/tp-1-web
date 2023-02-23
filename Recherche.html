@@ -28,9 +28,9 @@
                 <div id="logo" class="col-9">
                     <p>Mon site web :3</p>
                 </div>
-                <a class="col-1 text-center" href="./Accueil.html"><i class="fa-sharp fa-solid fa-house"></i> Accueil</a>
-                <a class="col-1 text-center" href="./Recherche.html"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
-                <a class="col-1 text-center" href="./Favoris.html"><i class="fa-sharp fa-solid fa-star"></i> Favoris</a>
+                <a class="col-1 text-center" href="./Accueil.html"><i class="fa-sharp fa-solid fa-house"></i> <span class="d-sm-none d-md-inline">Accueil</span></a>
+                <a class="col-1 text-center" href="./Recherche.html"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> <span class="d-sm-none d-md-inline">Recherche</span></a>
+                <a class="col-1 text-center" href="./Favoris.html"><i class="fa-sharp fa-solid fa-star"></i> <span class="d-sm-none d-md-inline">Favoris</span></a>
             </nav>
         </header>
         <main class="container" custom-border fill-background rounded-corners>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="row">
-                <div id="liste-des-cartes" class="col-9">
+                <div id="liste-des-cartes" class="col-12 col-md-9 order-1 order-md-0">
                     <div class="row cartes">
                         <a href="./Detail.html?carte=GTX1060" class="col-sm-12 col-md-4" hidden>
                             <div class="carte" marque-carte="Nvidia" nom-carte="GTX 1060" custom-border rounded-corners>
@@ -69,7 +69,7 @@
                         </a>
                     </div>
                 </div>
-                <div id="form-de-recherche" class="col-3">
+                <div id="form-de-recherche" class="col-12 col-md-3 order-0 order-md-1">
                     <p>Le form des cartes</p>
                     <form id="searchForm" class="row" action="https://www.w3schools.com/action_page.php" method="POST">
                         <div class="col-12">
