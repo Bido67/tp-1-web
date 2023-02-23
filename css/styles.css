@@ -31,10 +31,16 @@
     --border: 3px solid var(--text-color);
     --shrink-transition: all 1000ms ease-in-out;
 }
+body#header{
+    height: 100%;
+}
+body {
+    background-color: blue;
+}
 body#accueil{
     --header-color: var(--header-accueil-background-color);
 }
-body:not(#accueil){
+body:not(#accueil):not(#header){
     --header-color: var(--header-not-accueil-background-color);
 }
 nav {
@@ -68,6 +74,15 @@ body{
     margin:0px;
     /*width: 98vw;*/
 }
+header iframe{
+    width: 100%;
+    height: var(--header-height);
+    padding: 0px !important;
+}
+.row{
+    display: flex; /* Mode de display non vu*/
+    flex-wrap: warp; /* Vas avec le flex. Bootstrap utilise ceci...*/
+}
 .bruh {
     background-color: #eb0ce6;
     height: 100vh;
@@ -75,7 +90,7 @@ body{
     text-align: center;
     width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 .liens{
     display:flex;
@@ -193,7 +208,7 @@ div.carte::before{
     background-color: var(--carte-background-color);
 }
 div.carte::after{
-    content: attr(marque-carte);
+    content: attr(marque-carte); /* Définis le contenu d'un ::after ou ::before*/
     position: absolute;
     bottom: 5px;
     right: 5px;
