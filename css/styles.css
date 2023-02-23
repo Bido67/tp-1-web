@@ -208,6 +208,13 @@ div.carte::after{
 *[rounded-corners-padding-small]{
     padding: 7px 10px;
 }
+ul.noMarker ::marker{
+    color: transparent;
+}
+.col-spacer{
+    height: 10vh;
+}
+
 @media only screen and (max-width: 992px) {
     /*sm and less*/
     .fuckBootstrap{
