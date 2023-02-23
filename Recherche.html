@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Ces trucs meta ici n'ont pas rapport avec le tp... -->
+        <!-- Discord Embed-->
+        <meta name="color-scheme" content="light dark" />
+        <meta content="HOW DARE YOU LOOK AT MY TP" property="og:title" />
+        <meta content="MY TP STOP LOOKING!!!! :c" property="og:description" />
+        <meta content="https://bido67.github.io/tp-1-web" property="og:url" />
+        <meta content="https://bido67.github.io/tp-1-web/images/cartes/GTX1060.png" property="og:image" />
+        <meta content="#ff80ff" data-react-helmet="true" name="theme-color" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@bbido67" />
+        <!-- testing something -->
+        <meta name="msapplication-navbutton-color" content="#ff80ff" />
+        <!-- fin du pas rapport avec le tp. -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Détails</title>
@@ -120,14 +134,14 @@
                         return;
                     } else if (inputField.type == "checkbox") {
                         inputField.checked = true;
-                    }  else if (inputField.type == "text") {
+                    } else if (inputField.type == "text") {
                         inputField.value = "";
                     } else if (inputField.type == "number") {
                         inputField.value = "";
                     }
                 });
                 form.querySelectorAll("select").forEach((inputField) => {
-                        inputField.options.selectedIndex = 0;
+                    inputField.options.selectedIndex = 0;
                 });
                 editPage();
             }
