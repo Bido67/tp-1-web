@@ -210,7 +210,7 @@ div.carte::after{
 *[rounded-corners-padding-small]{
     padding: 7px 10px;
 }
-ul.noMarker ::marker{
+.noMarker ::marker{
     color: transparent;
 }
 .col-spacer{
@@ -234,6 +234,10 @@ ul.noMarker ::marker{
     header span {
         display: inline;
     }
+}
+ol,
+ol li{
+    width: max-content;
 }
 
 
