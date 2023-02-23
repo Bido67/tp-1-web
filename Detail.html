@@ -4,18 +4,77 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Détails</title>
-        <link rel="stylesheet" href="./css/styles.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <script src="https://kit.fontawesome.com/c23dfd3534.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body id="details">
-        <header class="container-fluid">
-            <nav class="row">
-                <a class="col-1" href="./Accueil.html"> shit</a>
-                <a class="col-1" href="./Recherche.html"> shit2</a>
-                <a class="col-1" href="./Favoris.html">shit 3 </a>
+        <header class="container">
+            <nav class="row align-items-center">
+                <div id="logo" class="col-9">
+                    <p>Mon site web :3</p>
+                </div>
+                <a class="col-1 text-center" href="./Accueil.html"><i class="fa-sharp fa-solid fa-house"></i> Accueil</a>
+                <a class="col-1 text-center" href="./Recherche.html"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
+                <a class="col-1 text-center" href="./Favoris.html"><i class="fa-sharp fa-solid fa-star"></i> Favoris</a>
             </nav>
         </header>
-        <main class="container"></main>
+        <main id="infoCarte" marque-carte="Nvidia" class="container" custom-border rounded-corners fill-background>
+            <div class="row">
+                <div class="col-12">
+                    <h1 id="nomCarte">NOM_DE_LA_CARTE</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-12">
+                    <img class="img-fluid" src="./images/cartes/GTX1060.png" alt="NVidia GTX 1060" custom-border rounded-corners fill-background />
+                </div>
+                <div class="col-spacer col-12 d-md-none"></div>
+                <div class="col-md-5 col-sm-6 fuckBootstrap info-labels">
+                    <ul class="noMarker">
+                        <li>Marque</li>
+                        <li>VRAM</li>
+                        <li>Type de VRAM</li>
+                        <li>Coeurs gpu</li>
+                        <li>TDP</li>
+                    </ul>
+                </div>
+                <div class="col-md-5 col-sm-6 fuckBootstrap card-info">
+                    <ul class="noMarker">
+                        <li>NOM_MARQUE</li>
+                        <li>Q_VRAM</li>
+                        <li>TYPE_DE_VRAM</li>
+                        <li>NB_COEURS_GPU</li>
+                        <li>TDP_W</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-12">
+                    <h2><span class="badge bg-secondary">Carte Vedette</span></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-12">
+                    <form id="searchForm" class="row" action="https://www.w3schools.com/action_page.php" method="POST">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            <div class="row justify-content-between">
+                                <input class="col-auto" type="text" name="carteFav" value="NOM_CARTE" hidden fill-background rounded-corners rounded-corners-padding-small />
+                                <button class="col-auto" type="submit" value="Favoris" fill-background rounded-corners rounded-corners-padding-small><i class="fa-solid fa-star"></i></i> Ajouter au favoris?</button>
+                            </div>
+                            <br />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 description-carte">
+                    <h2>Description</h2>
+                    <p>sjkaghjksfdaguifdanghd js fghisfd gn ng sdn sadf smnda fsiadgsfoagb dfab dafi saisjda hsfa bisfa nksdfisad gnksa vus vj sfandbfjsk gnkv dvjsbdjksa vhd fjkb vhd vh jhs d sdv hv dhivbsdahv sdjhv sh vbsda hs vh hiv sfadhv ns vjhsdh vh jhsa vs vhi wisd jhshgbsdn v fsad vhds shd sdng safd mnsda vhwidv  sgvjhfd </p>
+                </div>
+            </div>
+        </main>
         <footer class="container">
             <div class="row">
                 <div class="col">
