@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Ces trucs meta ici n'ont pas rapport avec le tp... -->
+        <!-- Ces trucs meta ici n'ont pas rapport avec le tp... Balises non vue en classe.. -->
         <!-- Discord Embed-->
         <meta name="color-scheme" content="light dark" />
         <meta content="HOW DARE YOU LOOK AT MY TP" property="og:title" />
@@ -17,23 +17,76 @@
         <!-- fin du pas rapport avec le tp. -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Détails</title>
+        <title>Favoris</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
         <script src="https://kit.fontawesome.com/c23dfd3534.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
         <header class="container">
-            <nav class="row align-items-center">
-                <div id="logo" class="col-9">
-                    <p>Mon site web :3</p>
-                </div>
-                <a class="col-1 text-center" href="./Accueil.html"><i class="fa-sharp fa-solid fa-house"></i> Accueil</a>
-                <a class="col-1 text-center" href="./Recherche.html"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
-                <a class="col-1 text-center" href="./Favoris.html"><i class="fa-sharp fa-solid fa-star"></i> Favoris</a>
-            </nav>
+            <div class="row">
+                <iframe class="col-12" src="./header" frameborder="0" title="header"></iframe>
+            </div>
         </header>
-        <main class="container"></main>
+        <main class="container" custom-border rounded-corners fill-background>
+            <div class="row">
+                <div class="col-12">
+                    <h1>Mes favs</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        Vous avez <b><span class="favCount">X</span></b> <b>Favoris</b>!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="table-dark">
+                                <th>Image</th>
+                                <th>Nom Carte</th>
+                                <th>Marque</th>
+                                <th>Année</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./images/cartes/GTX1060.png" alt="GTX1060" class="img-fluid"></td>
+                                <td> <a href="./Detail.html">GTX1060</a></td>
+                                <td>Nvidia</td>
+                                <td>2012</td>
+                                <td><i class="fa-regular fa-trash-can"></i></td>
+                            </tr>
+                            <tr>
+                                <td>GTX1060IMG</td>
+                                <td>GTX1060</td>
+                                <td>Nvidia</td>
+                                <td>2012</td>
+                                <td><i class="fa-regular fa-trash-can"></i></td>
+                            </tr>
+                            <tr>
+                                <td>GTX1060IMG</td>
+                                <td>GTX1060</td>
+                                <td>Nvidia</td>
+                                <td>2012</td>
+                                <td><i class="fa-regular fa-trash-can"></i></td>
+                            </tr>
+                            <tr>
+                                <td>GTX1060IMG</td>
+                                <td>GTX1060</td>
+                                <td>Nvidia</td>
+                                <td>2012</td>
+                                <td><i class="fa-regular fa-trash-can"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
         <footer class="container">
             <div class="row">
                 <div class="col">
