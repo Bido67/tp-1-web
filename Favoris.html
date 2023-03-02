@@ -41,46 +41,50 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr class="table-dark">
-                                <th>Image</th>
-                                <th>Nom Carte</th>
-                                <th>Marque</th>
-                                <th>Année</th>
-                                <th></th>
+            <div class="row justify-content-around">
+                <div class="col-11">
+                    <table class="table table-striped row" custom-border rounded-corners>
+                        <thead class="col-12">
+                            <tr class="table-dark row">
+                                <th class="col-2 col-md-2">Image</th>
+                                <th class="col-3 col-md-3">Nom Carte</th>
+                                <th class="col-3 col-md-3">Marque</th>
+                                <th class="col-2 col-md-3">Année</th>
+                                <th class="col-2 col-md-1">Retirer?</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td><img src="./images/cartes/GTX1060.png" alt="GTX1060" class="img-fluid"></td>
-                                <td> <a href="./Detail.html">GTX1060</a></td>
-                                <td>Nvidia</td>
-                                <td>2012</td>
-                                <td><i class="fa-regular fa-trash-can"></i></td>
-                            </tr>
-                            <tr>
-                                <td>GTX1060IMG</td>
-                                <td>GTX1060</td>
-                                <td>Nvidia</td>
-                                <td>2012</td>
-                                <td><i class="fa-regular fa-trash-can"></i></td>
-                            </tr>
-                            <tr>
-                                <td>GTX1060IMG</td>
-                                <td>GTX1060</td>
-                                <td>Nvidia</td>
-                                <td>2012</td>
-                                <td><i class="fa-regular fa-trash-can"></i></td>
-                            </tr>
-                            <tr>
-                                <td>GTX1060IMG</td>
-                                <td>GTX1060</td>
-                                <td>Nvidia</td>
-                                <td>2012</td>
-                                <td><i class="fa-regular fa-trash-can"></i></td>
+                        <tbody class="col-12 table-striped">
+                            <tr class="row align-items-stretch">
+                                <td class="col-2 col-md-2">
+                                    <img src="./images/cartes/GTX1060.png" alt="GTX1060" class="img-fluid" rounded-corners />
+                                </td>
+                                <td class="col-3 col-md-3">
+                                    <div class="row align-items-center myThing">
+                                        <div class="col-12 text-center"><a href="./Detail.html">GTX1060</a></div>
+                                    </div>
+                                </td>
+                                <td class="col-3 col-md-3 text-center">
+                                    <div class="row align-items-center myThing">
+                                        <div class="col-12 text-center">Nvidia</div>
+                                    </div>
+                                </td>
+                                <td class="col-2 col-md-3 text-center">
+                                    <div class="row align-items-center myThing">
+                                        <div class="col-12 text-center">2012</div>
+                                    </div>
+                                </td>
+                                <td class="col-2 col-md-1 text-center">
+                                    <div class="row align-items-center myThing">
+                                        <div class="col-12 text-center">
+                                            <form id="searchForm" class="row justify-content-around" action="https://www.w3schools.com/action_page.php" method="POST">
+                                                <input type="text" hidden name="nom" value="NOMDELACARTE">
+                                                <button class="col-auto" type="submit" title="removeFav" fill-background rounded-corners rounded-corners-padding-small>
+                                                    <i class="fa-regular fa-trash-can"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

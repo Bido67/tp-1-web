@@ -2,8 +2,7 @@
 :root {
     --text-color: black;
     --background-color: white;
-    --header-accueil-background-color: #ff800090;
-    --header-not-accueil-background-color: #00ff2690;
+
     
 }
 
@@ -11,6 +10,7 @@
     :root{
         --text-color: #ffffff;
         --background-color: #00000090;
+        --background-color-striped: #2c2c2c90;
         
     }
   }
@@ -19,6 +19,7 @@
     :root{
         --text-color: #000000;
         --background-color: #ffffff90;
+        --background-color-striped: #d3d3d390;
     }
   }
 :root{
@@ -30,21 +31,11 @@
     --border-radius: 25px;
     --border: 3px solid var(--text-color);
     --shrink-transition: all 1000ms ease-in-out;
+    --header-accueil-background-color: var(--background-color);
+    --header-not-accueil-background-color: var(--background-color);
 }
-body#header{
-    height: 100%;
-}
-body {
-    background-color: blue;
-}
-body#accueil{
-    --header-color: var(--header-accueil-background-color);
-}
-body:not(#accueil):not(#header){
-    --header-color: var(--header-not-accueil-background-color);
-}
-nav {
-    box-sizing: border-box;
+table tr,  table td, table th, table {
+    border: 0px solid black;
 }
 *[fill-background]{
     background-color: var(--background-color);
@@ -55,6 +46,13 @@ nav {
 }
 *[rounded-corners]{
     border-radius: var(--border-radius);
+    overflow: hidden;
+}
+*[margin-a-bit]{
+    margin-top: 2px;
+}
+.myThing {
+    height: 100%;
 }
 *{
     color: var(--text-color);
@@ -62,6 +60,35 @@ nav {
     -moz-transition: var(--shrink-transition);
     transition: var(--shrink-transition);
 }
+td a{
+    color: var(--text-color);
+}
+body#header{
+    height: 100%;
+}
+html {
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    background-image: linear-gradient(to bottom right, #0088ff, #ff00f7);
+    background-color: transparent;
+    
+}
+body {
+    /*background-image: linear-gradient(to bottom right, #0088ff, #ff00f7);*/
+    background-image: none;
+    background-color: transparent;
+}
+body#accueil{
+    --header-color: var(--header-accueil-background-color);
+}
+body:not(#accueil):not(#header){
+    --header-color: var(--header-not-accueil-background-color);
+}
+nav {
+    box-sizing: border-box;
+}
+
 nav,
 nav > iframe {
 border: 0px black solid; 
@@ -71,8 +98,10 @@ height: 10vh;
 width: 100%;
 }
 body{
+    padding-top: 0px;
     margin:0px;
     /*width: 98vw;*/
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 header iframe{
     width: 100%;
@@ -81,7 +110,7 @@ header iframe{
 }
 .row{
     display: flex; /* Mode de display non vu*/
-    flex-wrap: warp; /* Vas avec le flex. Bootstrap utilise ceci...*/
+    flex-wrap: wrap; /* Vas avec le flex. Bootstrap utilise ceci...*/
 }
 .bruh {
     background-color: #eb0ce6;
@@ -105,6 +134,10 @@ footer{
 }
 footer p {
     text-align: center;
+    margin-bottom: 0px
+}
+footer span {
+    color: blue;
 }
 header {
     z-index: 1;
@@ -112,22 +145,26 @@ header {
     top: 0px;
     height: var(--header-height);
     background-color: var(--header-color);
+    border-radius: 0px 0px var(--border-radius) var(--border-radius);
+    border-bottom: var(--border);
+    overflow: hidden;
 }
 main{
     --main-padding-top-bottom: 3vh;
     --main-padding-left-right: 5vw;
-    margin-top: calc(var(--header-height) + 2vh);
-    margin-bottom: calc(var(--footer-height) + 2vh);
+    margin-top: calc(var(--header-height)  + var(--footer-height));
+    margin-bottom: calc(var(--footer-height));
     padding-top: var(--main-padding-top-bottom);
     padding-bottom: var(--main-padding-top-bottom);
     padding-left: var(--main-padding-left-right);
     padding-right: var(--main-padding-left-right);
     width: 100vw;
+    height: calc( 100% - var(--header-height) - var(--footer-height))
 }
 footer,
 header{
     width: var(--footer-header-width) !important;
-    max-width: var(--footer-header-max-width)  !important;
+    max-width: var(--footer-header-max-width) !important;
 }
 .marque{
     --margin: 1%;
@@ -255,31 +292,13 @@ ol li{
     width: max-content;
 }
 
+/*Modification a bootstrap*/
 
-/*
-div[logo]{
-    width: 75%;
-    height: auto;
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    .table-striped>tbody>tr:nth-of-type(odd) {
+        --bs-table-accent-bg: var(--background-color-striped);
+        color: var(--background-color-striped);
+    }
 
-div[logo][nvidia]{
-    background-image: url(./images/logos/nvidia.png);
+#searchForm {
+    margin: 10px;
 }
-div[logo][amd]{
-    background-image: url(./images/logos/amd.png);
-}
-div[logo][intel]{
-    background-image: url(./images/logos/intel.png);
-}
-*/
-/*
-.marques{
-    --margin-left-right: 1%;
-    margin-left: var(--margin-left-right);
-    margin-right: var(--margin-left-right);
-}
-*/
